@@ -12,4 +12,9 @@ describe("testable 1: days until Christmas", () => {
     const date = new Date("2025", 11, 25);
     expect(daysUntilChristmas(date)).to.equal(0);
   });
+
+  test("the date after Christmas", () => {
+    const date = new Date("2025", 11, 26);
+    expect(daysUntilChristmas(date)).to.equal(364);
+  });
 });
