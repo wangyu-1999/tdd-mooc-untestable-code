@@ -1,3 +1,6 @@
+// Direct dependency on system time, causing test results to vary
+// No parameters, making it is impossible to provide different inputs for testing
+
 const millisPerDay = 24 * 60 * 60 * 1000;
 
 export function daysUntilChristmas() {
