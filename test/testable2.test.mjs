@@ -29,4 +29,12 @@ describe("testable 2: a dice game", () => {
       }
     });
   });
+
+  describe("diceHandValue", () => {
+    test("should return 101 when both dice are 1", () => {
+      const randomGenerator = () => 0;
+      const result = diceHandValue(randomGenerator);
+      expect(result).to.equal(101);
+    });
+  });
 });
