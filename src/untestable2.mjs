@@ -1,3 +1,6 @@
+// Direct dependency on randomness, causing test results to be unpredictable and non-repeatable
+// The internal diceRoll() function is not accessible for testing or mocking
+
 function diceRoll() {
   const min = 1;
   const max = 6;
