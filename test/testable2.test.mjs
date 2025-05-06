@@ -42,5 +42,21 @@ describe("testable 2: a dice game", () => {
       const result = diceHandValue(randomGenerator);
       expect(result).to.equal(106);
     });
+
+    test("should return the higher die when the dice are different", () => {
+      let flag = false;
+      const randomGenerator = () => {
+        if (flag) {
+          flag = false;
+          return 0.99;
+        } else {
+          flag = true;
+          return 0;
+        }
+      };
+
+      const result = diceHandValue(randomGenerator);
+      expect(result).to.equal(6);
+    });
   });
 });
