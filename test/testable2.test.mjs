@@ -15,5 +15,11 @@ describe("testable 2: a dice game", () => {
       const result = diceRoll(randomGenerator);
       expect(result).to.equal(6);
     });
+
+    test("return 4 when randomGenerator returns 0.5", () => {
+      const randomGenerator = () => 0.5;
+      const result = diceRoll(randomGenerator);
+      expect(result).to.equal(4);
+    });
   });
 });
