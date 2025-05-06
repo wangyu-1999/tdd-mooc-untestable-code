@@ -36,5 +36,11 @@ describe("testable 2: a dice game", () => {
       const result = diceHandValue(randomGenerator);
       expect(result).to.equal(101);
     });
+
+    test("should return 106 when both dice are 6", () => {
+      const randomGenerator = () => 0.99;
+      const result = diceHandValue(randomGenerator);
+      expect(result).to.equal(106);
+    });
   });
 });
