@@ -21,5 +21,12 @@ describe("testable 2: a dice game", () => {
       const result = diceRoll(randomGenerator);
       expect(result).to.equal(4);
     });
+
+    test("should return a number between 1 and 6", () => {
+      for (let i = 0; i < 100; i++) {
+        const result = diceRoll();
+        expect(result).to.be.within(1, 6);
+      }
+    });
   });
 });
